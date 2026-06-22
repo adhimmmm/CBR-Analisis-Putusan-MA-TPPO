@@ -1,0 +1,3 @@
+Model,Hit@5 Accuracy
+TF-IDF + Cosine,0.95
+IndoBERT + Cosine,0.85

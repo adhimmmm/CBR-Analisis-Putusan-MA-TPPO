@@ -1,42 +1,42 @@
 [
     {
-        "query_case_id": 14,
-        "ground_truth": 14
+        "query_case_id": 84,
+        "ground_truth": 84
     },
     {
-        "query_case_id": 40,
-        "ground_truth": 40
+        "query_case_id": 54,
+        "ground_truth": 54
     },
     {
-        "query_case_id": 31,
-        "ground_truth": 31
+        "query_case_id": 71,
+        "ground_truth": 71
     },
     {
         "query_case_id": 46,
         "ground_truth": 46
     },
     {
-        "query_case_id": 18,
-        "ground_truth": 18
+        "query_case_id": 45,
+        "ground_truth": 45
     },
     {
-        "query_case_id": 49,
-        "ground_truth": 49
+        "query_case_id": 40,
+        "ground_truth": 40
     },
     {
-        "query_case_id": 27,
-        "ground_truth": 27
+        "query_case_id": 23,
+        "ground_truth": 23
     },
     {
-        "query_case_id": 26,
-        "ground_truth": 26
+        "query_case_id": 81,
+        "ground_truth": 81
     },
     {
-        "query_case_id": 33,
-        "ground_truth": 33
+        "query_case_id": 11,
+        "ground_truth": 11
     },
     {
-        "query_case_id": 20,
-        "ground_truth": 20
+        "query_case_id": 1,
+        "ground_truth": 1
     }
 ]
