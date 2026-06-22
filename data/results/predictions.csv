@@ -1,0 +1,11 @@
+query_id,predicted_solution,top_5_case_ids
+14,ditolak dengan perbaikan,"12,13,16,17,8"
+40,ditolak dengan perbaikan,"35,32,16,8,9"
+31,dinyatakan ditolak,"29,24,6,28,47"
+46,dinyatakan ditolak,"50,48,3,7,4"
+18,ditolak dengan perbaikan,"17,16,32,8,21"
+49,ditolak dengan perbaikan,"25,10,8,22,12"
+27,ditolak dengan perbaikan,"8,39,32,17,36"
+26,ditolak dengan perbaikan,"12,8,32,21,43"
+33,dinyatakan ditolak,"11,6,12,44,7"
+20,dinyatakan ditolak,"29,24,19,21,6"
