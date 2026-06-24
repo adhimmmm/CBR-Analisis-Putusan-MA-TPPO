@@ -454,16 +454,98 @@ Model akan dilatih ulang menggunakan seluruh dataset terbaru.
 
 ---
 
-# Hasil Evaluasi
+# Hasil Evaluasi Model
 
-Model yang digunakan:
+Pengujian dilakukan menggunakan data uji dengan skenario pembagian data:
 
-| Model             | Tugas      |
-| ----------------- | ---------- |
-| TF-IDF + Cosine   | Retrieval  |
-| IndoBERT + Cosine | Retrieval  |
-| TF-IDF + SVM      | Prediction |
-| TF-IDF + Reuse    | Prediction |
+```text
+Train : 80%
+Test  : 20%
+```
+
+## Evaluasi Retrieval
+
+Model retrieval dievaluasi menggunakan metrik **Hit@5 Accuracy**, yaitu persentase query yang berhasil menemukan kasus relevan pada 5 hasil teratas.
+
+| Model | Hit@5 Accuracy |
+|--------|---------------|
+| TF-IDF + Cosine Similarity | 0.95 |
+| IndoBERT + Cosine Similarity | 0.85 |
+
+### Analisis
+
+- Model **TF-IDF + Cosine Similarity** menghasilkan performa terbaik pada tahap retrieval dengan nilai Hit@5 sebesar **95%**.
+- Model **IndoBERT + Cosine Similarity** memperoleh Hit@5 sebesar **85%**.
+- Hasil menunjukkan bahwa representasi berbasis TF-IDF lebih efektif pada dataset yang digunakan.
+
+---
+
+## Evaluasi Prediction
+
+Model prediksi dievaluasi menggunakan:
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+
+| Model | Accuracy | Precision | Recall | F1-Score |
+|--------|----------|-----------|--------|-----------|
+| TF-IDF + SVM | 0.95 | 0.91 | 0.95 | 0.93 |
+| TF-IDF + Reuse | 0.75 | 0.65 | 0.75 | 0.69 |
+
+### Analisis
+
+- Model **TF-IDF + SVM** memberikan performa terbaik dengan akurasi sebesar **95%**.
+- Pendekatan **Case Reuse** memperoleh akurasi sebesar **75%**.
+- Kesalahan prediksi umumnya terjadi pada kelas minoritas seperti:
+  - *menolak permohonan*
+  - *lainnya*
+  - *dinyatakan ditolak*
+
+---
+
+## Perbandingan Keseluruhan Model
+
+| Model | Jenis | Accuracy / Hit@5 |
+|--------|--------|------------------|
+| TF-IDF + Cosine | Retrieval | 0.95 |
+| IndoBERT + Cosine | Retrieval | 0.85 |
+| TF-IDF + SVM | Prediction | 0.95 |
+| TF-IDF + Reuse | Prediction | 0.75 |
+
+---
+
+## Distribusi Kelas Amar Putusan
+
+Distribusi kategori amar putusan pada dataset:
+
+| Amar Putusan | Jumlah Kasus |
+|-------------|-------------|
+| Mengadili | 43 |
+| Ditolak dengan Perbaikan | 24 |
+| Dinyatakan Ditolak | 19 |
+| Menolak Permohonan | 7 |
+| Mengabulkan Permohonan | 4 |
+| Lainnya | 3 |
+
+Distribusi data yang tidak seimbang menyebabkan model cenderung lebih baik dalam memprediksi kelas mayoritas dibandingkan kelas minoritas.
+
+---
+
+## Error Analysis
+
+Beberapa kesalahan prediksi yang ditemukan:
+
+| Actual | Predicted |
+|---------|-----------|
+| Menolak Permohonan | Dinyatakan Ditolak |
+| Menolak Permohonan | Mengadili |
+| Mengadili | Ditolak dengan Perbaikan |
+| Dinyatakan Ditolak | Ditolak dengan Perbaikan |
+| Lainnya | Ditolak dengan Perbaikan |
+
+Kesalahan prediksi menunjukkan bahwa beberapa kategori amar putusan memiliki karakteristik teks yang mirip sehingga sulit dibedakan oleh model.
 
 ---
 
