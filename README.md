@@ -473,7 +473,7 @@ Model yang digunakan:
 
 **M.Deanova Wishal Andika -  202310370311384**
 
-Program Studi Informatika
+Program Studi Informatika 
 Universitas Muhammadiyah Malang
 
 ---
