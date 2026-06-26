@@ -13,7 +13,7 @@ Sistem dibangun menggunakan pendekatan:
 
 Dataset yang digunakan berasal dari **Direktori Putusan Mahkamah Agung Republik Indonesia** dengan domain perkara:
 
-> **Pidana Khusus (Narkotika)**
+> **Pidana Khusus (Perdagangan Orang)**
 
 ---
 
